@@ -18,7 +18,7 @@ services:
       context: ./ar-shop
       dockerfile: Dockerfile-dev
     ports:
-      - "4200:4201"
+      - "4201:4201"
     container_name: ar-shop-angular-ui
     volumes:
        - ./ar-shop:/usr/src/app/ar-shop
