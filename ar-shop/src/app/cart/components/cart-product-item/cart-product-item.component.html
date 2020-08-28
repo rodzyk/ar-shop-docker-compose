@@ -1,0 +1,14 @@
+<img src="assets/box.svg" alt="box">
+<div class="info">
+    <h4>{{ value.product.name  }}</h4>
+
+    <span>${{ value.product.price }} x
+        <rap-count-input [min]="1" [(value)]="value.count"></rap-count-input>
+        | <span [@changeValueHighlight]="value.count">
+
+            ${{ value.product.price | number }}
+
+        </span></span>
+</div>
+
+<button class="button transparent" (click)="onDelete()">X</button>

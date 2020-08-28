@@ -1,0 +1,28 @@
+<h2 class="page-title">Cart</h2>
+
+<div class="content" *ngIf="cart.list.length>0; else empty">
+  <div>
+    <app-cart-product-item @fadeHeight *ngFor="let item of cart.list" [value]="item" (delete)="ondelete($event)">
+    </app-cart-product-item>
+  </div>
+  <div>
+    <div class="card text-center">
+      <h2>Order Summary</h2>
+      <span>{{cart.count}}</span> items
+      <br><br>
+      <b>Total: $<span>{{cart.total}}</span> </b>
+      <br><br>
+      <button class="button radius large">Checkout Now</button>
+      <br>
+      <br>
+      <a class="button small radius transparent" [routerLink]="'/'">Back to shop</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #empty>
+  <div class="card text-center">
+    <h2>Cart empty</h2>
+    <a class="button large radius transparent" [routerLink]="'/'">Back to shop</a>
+  </div>
+</ng-template>

@@ -1,0 +1,5 @@
+<img src="assets/cart.svg" alt="box">
+
+<div [@changeValueScale]="cart.count" *ngIf="cart.count > 0" class="count">
+  {{ cart.count }}
+</div>

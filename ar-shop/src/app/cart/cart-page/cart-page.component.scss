@@ -1,0 +1,29 @@
+@import "~src/assets/variables";
+
+:host {
+    display: block;
+    position: relative;
+    padding: $space * 2 0;
+}
+
+.content {
+    display: grid;
+    grid-gap: $space ;
+    grid-template-columns: #{$gr_longer + "fr"} #{$gr_shorter + "fr"};
+}
+
+.card {
+    padding: $space * 2 $space $space * 3;
+    background-color: $white;
+    border-radius: $radius;
+    @include material-shadow(1, 1, $gray400);
+
+    position: sticky;
+    top: $space * 5;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: block;
+    }
+}

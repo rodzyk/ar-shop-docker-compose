@@ -1,0 +1,33 @@
+@import "~src/assets/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border-radius: $radius;
+  @include material-shadow(1, 1, $gray400);
+  padding: $space/2;
+  margin-bottom: $space/2;
+}
+
+img {
+  width: 40px;
+  margin-right: $space/2;
+  border-radius: 3px;
+}
+
+.info {
+  flex: 1;
+}
+
+h4 {
+  margin: $space/8 0;
+}
+
+rap-count-input {
+  width: 96px;
+  display: inline-flex;
+  border: 0;
+  padding: 0 2px;
+  border-bottom: 1px dashed $gray500;
+}
