@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~src/assets/variables";
+@import "~src/assets/buttons";
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    color: #333;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin: 0 0.75rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin: 0 2rem;
+    }
+}
+@media (min-width: 1080px) {
+    .container {
+        margin: 0 6rem;
+    }
+}
+@media (min-width: 1720px) {
+    .container {
+        min-width: 1680px;
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+}
+
+body {
+    background-color: #f0f4f8;
+}
+
+.flex {
+    display: flex;
+}
