@@ -1,0 +1,29 @@
+<ng-container *ngIf="!vertical">
+  <button (click)="decrement()" [disabled]="disabled">-</button>
+  <input
+    type="number"
+    [(ngModel)]="value"
+    (ngModelChange)="onValueChange()"
+    [disabled]="disabled"
+  />
+  <button (click)="increment()" [disabled]="disabled">+</button>
+</ng-container>
+
+<ng-container *ngIf="vertical">
+  <div>
+    <input
+      type="number"
+      [(ngModel)]="value"
+      (ngModelChange)="onValueChange()"
+      [disabled]="disabled"
+    />
+  </div>
+  <div>
+    <button class="plus-btn" (click)="increment()" [disabled]="disabled">
+      +
+    </button>
+    <button class="minus-btn" (click)="decrement()" [disabled]="disabled">
+      -
+    </button>
+  </div>
+</ng-container>

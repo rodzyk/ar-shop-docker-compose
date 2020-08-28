@@ -1,0 +1,90 @@
+
+@import "~src/assets/variables";
+
+
+:host {
+    display: block;
+    display: flex;
+    position: relative;
+    border: 1px solid #ced5d9;
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    line-height: 1.15;
+    overflow: hidden;
+  
+    &:hover {
+      border-color: $primary;
+    }
+  
+    &[ng-reflect-is-disabled="true"] {
+      border-color: #ececec;
+      opacity: 0.64;
+    }
+  
+    button,
+    input {
+      @include transition();
+      border: 0;
+      background-color: inherit;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      padding: 0;
+      margin: 0;
+      min-width: 0;
+      width: 100%;
+      -moz-appearance: textfield;
+    }
+  
+    input {
+      height: 100%;
+    }
+  
+    button {
+      outline: none;
+      color: $gray600;
+      font-weight: bold;
+      padding: $space/4 $space/2;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: rgba(black, 0.064);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+      &[disabled] {
+        background-color: #ececec;
+        color: $white;
+        cursor: not-allowed;
+      }
+  
+      &.plus-btn,
+      &.minus-btn {
+        border-left: 1px solid $gray200;
+       
+      }
+      &.plus-btn {
+        border-bottom: 1px solid $gray200;
+      }
+    }
+  
+    input {
+      text-align: center;
+      padding: $space/4 $space/2;
+      &[disabled] {
+        background-color: #ececec;
+        color: $white;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
