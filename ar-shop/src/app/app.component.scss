@@ -1,0 +1,39 @@
+@import "~src/assets/variables";
+
+header {
+    padding: 4px 0;
+    color: white;
+    background-color: #0d3148;
+    @include material-shadow(2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+@media (min-width: 1080px) {
+    header {
+        padding: 8px 0;
+    }
+}
+
+.container.flex {
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    h1 {
+        font-weight: normal;
+        margin: 0;
+    }
+    img {
+        width: 40px;
+    }
+}
+
+.cart-link {
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+}
