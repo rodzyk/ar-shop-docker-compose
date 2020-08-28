@@ -1,0 +1,30 @@
+@import "~src/assets/variables";
+
+:host {
+    // border: 1px solid;
+    padding: $space;
+    background-color: $white;
+
+    @include material-shadow(1, 1, $gray400);
+    @include transition();
+    transform-origin: bottom center;
+    border-radius: $radius;
+    &:hover {
+        @include material-shadow(2, 1, $gray500);
+        transform: scale(1.01);
+    }
+}
+
+.price {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}

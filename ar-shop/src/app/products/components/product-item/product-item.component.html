@@ -1,0 +1,7 @@
+<img src="assets/box.svg" alt="box">
+<h4>{{product.name}}</h4>
+<p>{{product.label}}</p>
+<div class="price">
+    <span>${{product.price}}</span>
+    <button role="button" class="button radius" (click)="toCart($event, product)">Add to cart</button>
+</div>
