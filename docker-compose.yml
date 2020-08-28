@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  nodejs-server:
+    build:
+      context: ./api
+      dockerfile: Dockerfile-dev
+    ports:
+      - "3080:3080"
+    container_name: ar-shop-node-api
+    volumes:
+       - ./api:/usr/src/app/api
+       - /usr/src/app/api/node_modules
+
+  angular-ui:
+    build:
+      context: ./ar-shop
+      dockerfile: Dockerfile-dev
+    ports:
+      - "4200:4201"
+    container_name: ar-shop-angular-ui
+    volumes:
+       - ./ar-shop:/usr/src/app/ar-shop
+       - /usr/src/app/ar-shop/node_modules
